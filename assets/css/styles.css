@@ -38,14 +38,26 @@
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.2'/%3E%3C/svg%3E");
 }
 
+/* The reception runs into the evening and finishes with a DJ, so its
+   palette is dusk rather than daylight: a deep plum page lit by the
+   colours a dance floor throws. Every token the layout already uses is
+   redefined here, which is why the same markup comes out dark. */
 [data-theme="reception"] {
-  --cream:   #fdf9f8;
-  --cream-2: #faf0ee;
-  --cream-3: #f4e4e2;
-  --wash-1:  #fffcfb;
-  --wash-2:  #fdf1ef;
-  --wash-3:  #f8e6e4;
-  --petal:   #e9a7ae;
+  --cream:   #1b1030;
+  --cream-2: #241640;
+  --cream-3: #2c1a4d;
+  --wash-1:  #35215c;
+  --wash-2:  #3d2059;
+  --wash-3:  #291748;
+
+  --ink:       #f7effd;
+  --muted:     #c5b4de;
+  --crimson:   #ff4f93;
+  --crimson-d: #ff82b4;
+  --green:     #45e0c8;
+  --petal:     #ffc24d;
+  --gold-lamp: #ffc24d;
+  --line:      rgba(255, 79, 147, .38);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -311,7 +323,9 @@ body.is-locked { overflow: hidden; }
   background-repeat: no-repeat;
 }
 
-/* The veil sits under them, never across them. */
+/* The veil sits under them, never across them. It is mixed from the
+   page's own base colour, so it comes out cream on the wedding and
+   plum on the reception without either page saying so. */
 .gate__veil {
   position: relative;
   grid-row: 2;
@@ -319,10 +333,10 @@ body.is-locked { overflow: hidden; }
   text-align: center;
   background: linear-gradient(
     180deg,
-    rgba(253, 251, 247, 0) 0%,
-    rgba(253, 251, 247, .30) 18%,
-    rgba(252, 248, 241, .80) 38%,
-    rgba(250, 246, 238, .96) 56%,
+    color-mix(in srgb, var(--cream) 0%,  transparent) 0%,
+    color-mix(in srgb, var(--cream) 32%, transparent) 18%,
+    color-mix(in srgb, var(--cream) 80%, transparent) 38%,
+    color-mix(in srgb, var(--cream) 96%, transparent) 56%,
     var(--cream) 78%
   );
 }
@@ -355,6 +369,14 @@ body.is-locked { overflow: hidden; }
 }
 
 .motif--lamp-lg { height: clamp(3.4rem, 9vw, 4.6rem); }
+
+.motif--ball {
+  width: auto;
+  height: clamp(3.2rem, 9vw, 4.2rem);
+  aspect-ratio: 64 / 88;
+  color: #9fc4e4;
+  margin-bottom: 1rem;
+}
 
 .motif--rule {
   width: min(20rem, 72%);
@@ -749,6 +771,72 @@ body.is-locked { overflow: hidden; }
       transparent);
 }
 
+/* ── the reception's evening ───────────────────────────── */
+
+/* The grain reads as dust on a dark page, so ease it off. */
+[data-theme="reception"] body::after { opacity: .14; }
+
+/* Dark ink on the bright button, and a glow where a shadow would
+   simply vanish against the plum. */
+[data-theme="reception"] .btn {
+  color: #1b1030;
+  box-shadow: 0 10px 30px -10px rgba(255, 79, 147, .65);
+}
+
+[data-theme="reception"] .btn:hover,
+[data-theme="reception"] .btn:focus-visible {
+  box-shadow: 0 16px 38px -12px rgba(255, 79, 147, .8);
+}
+
+[data-theme="reception"] .btn--ghost {
+  color: var(--crimson);
+  box-shadow: none;
+}
+
+[data-theme="reception"] .card:hover {
+  box-shadow: 0 24px 60px -28px rgba(255, 79, 147, .55);
+}
+
+[data-theme="reception"] .unit {
+  box-shadow: inset 0 0 28px -18px rgba(69, 224, 200, .9);
+}
+
+/* The dance floor, given more room than a portrait. */
+.portrait--floor img { width: min(27rem, 84vw); }
+
+/* Four bars keeping time either side of the heading. */
+.equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 2rem;
+}
+
+.equalizer i {
+  display: block;
+  width: 5px;
+  height: 60%;
+  border-radius: 2.5px;
+  background: var(--crimson);
+  animation: bounce 1.1s ease-in-out infinite;
+}
+
+.equalizer i:nth-child(2) { background: var(--green);   animation-delay: .16s; }
+.equalizer i:nth-child(3) { background: var(--petal);   animation-delay: .32s; }
+.equalizer i:nth-child(4) { background: #a06bff;        animation-delay: .48s; }
+
+/* ── petals, and the confetti that replaces them ───────── */
+
+.confetti {
+  position: absolute;
+  top: -8vh;
+  border-radius: 1px;
+  opacity: .9;
+  animation: fall linear infinite;
+}
+
+.confetti--round { border-radius: 50%; }
+
 /* ── petals ────────────────────────────────────────────── */
 
 .petals {
@@ -794,6 +882,11 @@ body.is-locked { overflow: hidden; }
 @keyframes fall {
   0%   { transform: translate3d(0, 0, 0) rotate(0deg); }
   100% { transform: translate3d(var(--drift, 6vw), 112vh, 0) rotate(540deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { height: 35%; }
+  50%      { height: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

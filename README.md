@@ -36,10 +36,19 @@ reception-8b0696e3be/index.html   the reception
 robots.txt                        keeps search engines off the whole site
 assets/css/styles.css             both palettes; `data-theme` on <html> picks one
 assets/js/main.js                 gate, petals, countdown, calendar buttons
-assets/img/couple-wedding.webp    the artwork on the wedding opening screen
-assets/img/couple-reception.svg  the drawn couple on the reception page
-assets/img/garland-*.svg          the hanging flowers across the top
+assets/img/couple-*.webp          the artwork on each opening screen
+assets/img/garland-wedding.svg    the hanging flowers over the wedding
+assets/img/festoon-reception.svg  the party lights over the reception
+assets/img/dancefloor.svg         the mirror ball and dancers
 ```
+
+The two pages are deliberately different in mood: the wedding is daylight,
+the reception is dusk, because the evening ends with a DJ. Nothing is
+duplicated to achieve that — `[data-theme="reception"]` in the stylesheet
+redefines the same colour tokens the layout already used, so one attribute on
+`<html>` turns the whole page over. The reception also drops confetti instead
+of petals, which the page asks for with `data-effect="confetti"` on the
+falling-bits layer.
 
 The wedding opening screen shows the supplied artwork full width. The picture
 is named on the element itself, in `wedding-*/index.html`:

@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 470" role="img" aria-labelledby="df">
+<title id="df">A mirror ball over a dance floor, and a couple dancing beneath it</title>
+
+<defs>
+  <radialGradient id="spot" cx="50%" cy="76%" r="52%">
+    <stop offset="0"  stop-color="#ffc24d" stop-opacity=".55"/>
+    <stop offset=".55" stop-color="#ff4f93" stop-opacity=".22"/>
+    <stop offset="1"  stop-color="#ff4f93" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="ball" cx="36%" cy="30%" r="72%">
+    <stop offset="0" stop-color="#d9f4ff"/>
+    <stop offset=".6" stop-color="#8fb6d8"/>
+    <stop offset="1" stop-color="#4a5f88"/>
+  </radialGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="currentColor" stop-opacity=".42"/>
+    <stop offset="1" stop-color="currentColor" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+
+<!-- ── beams thrown off the ball ───────────────────────── -->
+<g fill="url(#beam)">
+  <g color="#ff4f93"><path d="M220 78 L46 330 L2 262 Z"/><path d="M220 78 L300 392 L232 400 Z"/></g>
+  <g color="#45e0c8"><path d="M220 78 L394 330 L438 262 Z"/><path d="M220 78 L140 392 L208 400 Z"/></g>
+  <g color="#ffc24d"><path d="M220 78 L10 190 L14 128 Z"/><path d="M220 78 L430 190 L426 128 Z"/></g>
+  <g color="#a06bff"><path d="M220 78 L96 404 L40 360 Z"/><path d="M220 78 L344 404 L400 360 Z"/></g>
+</g>
+
+<!-- ── the floor it all lands on ───────────────────────── -->
+<ellipse cx="220" cy="392" rx="190" ry="64" fill="url(#spot)"/>
+
+<!-- ── mirror ball ─────────────────────────────────────── -->
+<path d="M220 0 V38" stroke="#6b5a8f" stroke-width="3"/>
+<rect x="212" y="36" width="16" height="8" rx="2" fill="#6b5a8f"/>
+<circle cx="220" cy="78" r="36" fill="url(#ball)"/>
+<g stroke="#2b3a5c" stroke-width="1" opacity=".55" fill="none">
+  <path d="M184 78h72M186 62h68M186 94h68M192 48h56M192 108h56"/>
+  <path d="M220 42v72M204 44v68M236 44v68M190 54v48M250 54v48"/>
+</g>
+<g fill="#ffffff" opacity=".85">
+  <rect x="198" y="58" width="9" height="8"/>
+  <rect x="226" y="86" width="9" height="8"/>
+  <rect x="234" y="62" width="7" height="7"/>
+</g>
+
+<!-- ══════════════ the couple, mid-turn ══════════════ -->
+<g fill="#140a22">
+
+  <!-- him: one arm up, holding her hand through the twirl -->
+  <circle cx="158" cy="168" r="18"/>
+  <path d="M150 156c-4-14 5-24 17-22 9 1 14 8 13 15-9-6-22-4-30 7z" fill="#0d0617"/>
+  <path d="M140 190c-6 4-10 12-11 21l-5 62c-1 8 5 12 11 10l30-8c6-2 9-7 8-14l-7-63c-1-9-6-15-13-18-4-2-9-2-13 0z"/>
+  <path d="M170 196c9 4 16 0 24-9l22-26c4-5 11-5 14 0 3 4 1 9-3 13l-27 31c-13 15-27 19-38 11z"/>
+  <path d="M128 186c-8 5-13 13-15 23l-7 38c-1 7 8 10 11 3l16-38z"/>
+  <path d="M132 276l-12 76c-1 8 10 11 13 3l19-56z"/>
+  <path d="M158 274l14 74c2 8 13 6 12-2l-6-74z"/>
+  <path d="M104 352h34v9h-38z"/>
+  <path d="M166 348h34v9h-38z"/>
+
+  <!-- her: skirt out, hair flying, hand meeting his -->
+  <circle cx="282" cy="176" r="16"/>
+  <path d="M296 166c14-10 30-8 38 4-13-3-24 0-33 9-3 3-8 1-7-4z" fill="#0d0617"/>
+  <path d="M268 172c-14-4-26 2-32 14 12-6 22-5 31 2 3 2 7-1 5-5z" fill="#0d0617"/>
+  <path d="M270 198c-8 5-12 14-12 24l3 40h46l4-40c1-11-5-21-15-25-8-3-18-2-26 1z"/>
+  <path d="M268 200c-9 5-18 2-26-7l-16-19c-4-4-10-3-12 2-2 4 0 8 4 11l20 22c11 13 24 16 34 9z"/>
+  <path d="M322 208c10 2 18 9 22 19l10 26c3 7-6 12-10 5l-18-30z"/>
+  <path d="M258 262l-44 96c-3 7 5 13 10 8l52-52 48 50c5 5 13-1 10-8l-40-94z"/>
+  <path d="M232 356l-14 8 6 9 16-9z"/>
+  <path d="M310 358l14 8-6 9-16-9z"/>
+</g>
+
+<!-- ── confetti in the air ─────────────────────────────── -->
+<g>
+  <rect x="58" y="128" width="9" height="5" rx="1" fill="#ff4f93" transform="rotate(24 58 128)"/>
+  <rect x="368" y="160" width="9" height="5" rx="1" fill="#45e0c8" transform="rotate(-36 368 160)"/>
+  <rect x="96" y="238" width="8" height="5" rx="1" fill="#ffc24d" transform="rotate(-18 96 238)"/>
+  <rect x="348" y="256" width="8" height="5" rx="1" fill="#a06bff" transform="rotate(42 348 256)"/>
+  <rect x="140" y="106" width="8" height="5" rx="1" fill="#45e0c8" transform="rotate(60 140 106)"/>
+  <rect x="292" y="112" width="8" height="5" rx="1" fill="#ff4f93" transform="rotate(-52 292 112)"/>
+  <circle cx="74"  cy="300" r="4" fill="#a06bff"/>
+  <circle cx="372" cy="314" r="4" fill="#ffc24d"/>
+  <circle cx="122" cy="168" r="3.4" fill="#ff4f93"/>
+  <circle cx="330" cy="200" r="3.4" fill="#45e0c8"/>
+  <circle cx="48"  cy="212" r="3" fill="#ffc24d"/>
+  <circle cx="404" cy="244" r="3" fill="#ff4f93"/>
+</g>
+</svg>

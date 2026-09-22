@@ -60,23 +60,39 @@
   var petalLayer = document.getElementById("petals");
   var wantsCalm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* The wedding drops petals; the reception, which ends with a DJ,
+     drops confetti instead. The page says which by setting
+     data-effect="confetti" on the layer. */
+  var CONFETTI_COLOURS = ["#ff4f93", "#ffc24d", "#45e0c8", "#a06bff", "#ff8a4d"];
+
   if (petalLayer && !wantsCalm) {
-    var count = window.innerWidth < 640 ? 14 : 26;
+    var confetti = petalLayer.dataset.effect === "confetti";
+    var count = window.innerWidth < 640 ? 16 : 34;
 
     for (var i = 0; i < count; i++) {
-      var petal = document.createElement("span");
+      var bit = document.createElement("span");
       var size = 7 + Math.random() * 9;
 
-      petal.className = "petal";
-      petal.style.left = (Math.random() * 100).toFixed(2) + "%";
-      petal.style.width = size.toFixed(1) + "px";
-      petal.style.height = (size * 0.85).toFixed(1) + "px";
-      petal.style.opacity = (0.28 + Math.random() * 0.4).toFixed(2);
-      petal.style.animationDuration = (11 + Math.random() * 14).toFixed(1) + "s";
-      petal.style.animationDelay = (-Math.random() * 20).toFixed(1) + "s";
-      petal.style.setProperty("--drift", (Math.random() * 18 - 9).toFixed(1) + "vw");
+      if (confetti) {
+        bit.className = "confetti" + (Math.random() < 0.3 ? " confetti--round" : "");
+        bit.style.width = size.toFixed(1) + "px";
+        bit.style.height = (size * (0.4 + Math.random() * 0.3)).toFixed(1) + "px";
+        bit.style.background =
+          CONFETTI_COLOURS[Math.floor(Math.random() * CONFETTI_COLOURS.length)];
+        bit.style.opacity = (0.55 + Math.random() * 0.4).toFixed(2);
+      } else {
+        bit.className = "petal";
+        bit.style.width = size.toFixed(1) + "px";
+        bit.style.height = (size * 0.85).toFixed(1) + "px";
+        bit.style.opacity = (0.28 + Math.random() * 0.4).toFixed(2);
+      }
 
-      petalLayer.appendChild(petal);
+      bit.style.left = (Math.random() * 100).toFixed(2) + "%";
+      bit.style.animationDuration = (11 + Math.random() * 14).toFixed(1) + "s";
+      bit.style.animationDelay = (-Math.random() * 20).toFixed(1) + "s";
+      bit.style.setProperty("--drift", (Math.random() * 18 - 9).toFixed(1) + "vw");
+
+      petalLayer.appendChild(bit);
     }
   }
 
