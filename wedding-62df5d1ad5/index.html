@@ -16,22 +16,87 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Raghav T Raj &amp; Krishnapriya K R — Wedding Invitation" />
 <meta property="og:description" content="Saturday, 21 November 2026 · 11.45 AM · Santhome Riverside Arena, Aluva." />
+<meta property="og:image" content="/assets/img/couple-wedding.webp" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Noto+Serif+Malayalam:wght@400;500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="../assets/css/styles.css" />
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%90%3C/text%3E%3C/svg%3E" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%94%3C/text%3E%3C/svg%3E" />
 </head>
 <body class="is-locked">
 
-<!-- ── 1. the gate ─────────────────────────────────────── -->
-<div class="gate" id="gate">
-  <div class="gate__card">
+<!-- ══════════════════════════════════════════════════════════
+     The motifs, drawn once here and reused wherever they are
+     needed. Every shape is currentColor, so each one takes the
+     colour of whatever it sits in.
+     ══════════════════════════════════════════════════════════ -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+
+  <!-- nilavilakku, the Kerala brass lamp -->
+  <symbol id="m-lamp" viewBox="0 0 60 108">
+    <path d="M30 2c5.5 9.5 8.5 15 8.5 19.5a8.5 8.5 0 0 1-17 0C21.5 17 24.5 11.5 30 2z"/>
+    <path d="M30 11c2.8 5 4.3 8 4.3 10.2a4.3 4.3 0 0 1-8.6 0C25.7 19 27.2 16 30 11z" fill-opacity=".35"/>
+    <path d="M12 38h36l-5 11H17z"/>
+    <path d="M6 36l11 4-11 3z"/>
+    <path d="M54 36l-11 4 11 3z"/>
+    <path d="M27 49h6v12h-6z"/>
+    <ellipse cx="30" cy="63" rx="11" ry="3.6"/>
+    <path d="M27.5 66h5v10h-5z"/>
+    <ellipse cx="30" cy="78" rx="8.5" ry="3"/>
+    <path d="M28 81h4v9h-4z"/>
+    <path d="M15 90h30l7 13H8z"/>
+    <ellipse cx="30" cy="103" rx="25" ry="3.8" fill-opacity=".45"/>
+  </symbol>
+
+  <!-- a jasmine bloom between two leaves, used as a divider -->
+  <symbol id="m-jasmine" viewBox="0 0 220 26">
+    <path d="M0 13h74M146 13h74" stroke="currentColor" stroke-width="1" opacity=".45" fill="none"/>
+    <ellipse cx="86" cy="13" rx="9" ry="4" transform="rotate(-18 86 13)" opacity=".6"/>
+    <ellipse cx="134" cy="13" rx="9" ry="4" transform="rotate(18 134 13)" opacity=".6"/>
+    <ellipse cx="110" cy="6" rx="3.4" ry="5"/>
+    <ellipse cx="116" cy="9.5" rx="3.4" ry="5" transform="rotate(60 116 9.5)"/>
+    <ellipse cx="116" cy="16.5" rx="3.4" ry="5" transform="rotate(120 116 16.5)"/>
+    <ellipse cx="110" cy="20" rx="3.4" ry="5"/>
+    <ellipse cx="104" cy="16.5" rx="3.4" ry="5" transform="rotate(60 104 16.5)"/>
+    <ellipse cx="104" cy="9.5" rx="3.4" ry="5" transform="rotate(120 104 9.5)"/>
+    <circle cx="110" cy="13" r="2.4" fill-opacity=".5"/>
+  </symbol>
+
+  <!-- temple elephant, wearing its nettipattam -->
+  <symbol id="m-elephant" viewBox="0 0 124 94">
+    <rect x="26" y="56" width="12" height="30" rx="5"/>
+    <rect x="45" y="58" width="11" height="28" rx="5"/>
+    <rect x="62" y="56" width="12" height="30" rx="5"/>
+    <rect x="80" y="58" width="11" height="28" rx="5"/>
+    <ellipse cx="58" cy="46" rx="35" ry="23"/>
+    <path d="M23 34c-7 3-9 12-6 21" stroke="currentColor" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+    <circle cx="96" cy="46" r="19"/>
+    <path d="M86 32c11-5 22 2 22 13s-10 17-19 14c4-9 4-20-3-27z" fill-opacity=".7"/>
+    <path d="M110 54c6 9 6 21 1 29-2 4-8 4-9-1-1-7 2-13 1-19-1-5-4-7-6-8z"/>
+    <path d="M100 62c7 2 12 7 13 13-5-4-10-6-15-6z" fill-opacity=".55"/>
+    <path d="M96 24c12 0 21 9 21 19H75c0-10 9-19 21-19z" fill-opacity=".85"/>
+    <circle cx="96" cy="33" r="3.4" fill-opacity=".45"/>
+  </symbol>
+
+</svg>
+
+<!-- ══════════════ 1. the opening card ══════════════ -->
+<!--
+  The artwork lives here, full screen, where it can actually be
+  looked at. The picture is named on this element, so swapping it
+  is a one-line change. The path is root-absolute on purpose: a
+  relative url() inside a custom property resolves against the
+  stylesheet, not against this page.
+-->
+<div class="gate gate--photo" id="gate"
+     style="--photo: url('/assets/img/couple-wedding.webp')">
+  <div class="gate__veil">
+    <svg class="motif motif--lamp"><use href="#m-lamp" /></svg>
     <p class="eyebrow">Wedding Invitation</p>
-    <p class="script">We're finally making it official!</p>
+    <p class="malayalam">ശുഭവിവാഹം</p>
     <h1 class="gate__names">Raghav T Raj<br />&amp; Krishnapriya K R</h1>
-    <div class="rule"><span></span>&#10022;<span></span></div>
+    <svg class="motif motif--rule"><use href="#m-jasmine" /></svg>
     <button class="btn" id="openInvitation" type="button">Open Invitation</button>
   </div>
 </div>
@@ -42,8 +107,10 @@
 
   <img class="garland" src="../assets/img/garland-wedding.svg" alt="" aria-hidden="true" />
 
-  <!-- ── 2. the invitation ─────────────────────────────── -->
+  <!-- ══════════════ 2. the invitation ══════════════ -->
   <section class="hero reveal">
+    <svg class="motif motif--lamp motif--lamp-lg"><use href="#m-lamp" /></svg>
+
     <p class="eyebrow">Wedding Ceremony</p>
 
     <p class="family">
@@ -62,7 +129,7 @@
       <span class="couple__name">Krishnapriya K R</span>
     </h2>
 
-    <div class="rule rule--wide"><span></span>&#10022;<span></span></div>
+    <svg class="motif motif--rule"><use href="#m-jasmine" /></svg>
 
     <p class="family">
       D/O Mr. Rajesh P R &amp; Mrs S Deepa
@@ -74,13 +141,7 @@
     <a class="scroll-cue" href="#details" aria-label="Scroll to the details"><span></span></a>
   </section>
 
-  <!-- ── the couple ─────────────────────────────────── -->
-  <section class="portrait reveal">
-    <img src="../assets/img/couple-wedding.svg" width="440" height="530"
-         alt="An illustration of Raghav and Krishnapriya in traditional wedding dress" />
-  </section>
-
-  <!-- ── 3. the day ────────────────────────────────────── -->
+  <!-- ══════════════ 3. the day ══════════════ -->
   <section class="events" id="details">
     <div class="events__grid">
       <!--
@@ -110,7 +171,7 @@
 
         <p class="card__time">11.45 &ndash; 12.30 PM</p>
 
-        <div class="rule rule--sm"><span></span>&#10022;<span></span></div>
+        <svg class="motif motif--rule motif--rule-sm"><use href="#m-jasmine" /></svg>
 
         <h3 class="card__venue">Santhome Riverside Arena</h3>
         <p class="card__address">
@@ -125,28 +186,32 @@
 
   <div class="band">
 
-  <!-- ── 4. countdown ──────────────────────────────────── -->
-  <section class="countdown reveal">
-    <p class="eyebrow">Happily Ever After</p>
-    <div class="countdown__grid" id="countdownGrid" role="timer">
-      <div class="unit"><span class="unit__num" data-days>00</span><span class="unit__label">Days</span></div>
-      <div class="unit"><span class="unit__num" data-hours>00</span><span class="unit__label">Hours</span></div>
-      <div class="unit"><span class="unit__num" data-mins>00</span><span class="unit__label">Mins</span></div>
-      <div class="unit"><span class="unit__num" data-secs>00</span><span class="unit__label">Secs</span></div>
-    </div>
-    <p class="countdown__done" id="countdownDone" hidden>Today is the day. Thank you for celebrating with us.</p>
-  </section>
+    <!-- ══════════════ 4. countdown ══════════════ -->
+    <section class="countdown reveal">
+      <p class="tuskers">
+        <svg class="motif motif--elephant"><use href="#m-elephant" /></svg>
+        <span class="eyebrow">Happily Ever After</span>
+        <svg class="motif motif--elephant motif--flip"><use href="#m-elephant" /></svg>
+      </p>
+      <div class="countdown__grid" id="countdownGrid" role="timer">
+        <div class="unit"><span class="unit__num" data-days>00</span><span class="unit__label">Days</span></div>
+        <div class="unit"><span class="unit__num" data-hours>00</span><span class="unit__label">Hours</span></div>
+        <div class="unit"><span class="unit__num" data-mins>00</span><span class="unit__label">Mins</span></div>
+        <div class="unit"><span class="unit__num" data-secs>00</span><span class="unit__label">Secs</span></div>
+      </div>
+      <p class="countdown__done" id="countdownDone" hidden>Today is the day. Thank you for celebrating with us.</p>
+    </section>
 
-  <!-- ── 5. add to calendar ────────────────────────────── -->
-  <section class="calendar reveal">
-    <p class="eyebrow">Keep the Day Free</p>
-    <p class="calendar__hint">Add the ceremony to your calendar so the date stays yours.</p>
-    <div class="calendar__actions" id="calendarActions"></div>
-  </section>
+    <!-- ══════════════ 5. add to calendar ══════════════ -->
+    <section class="calendar reveal">
+      <p class="eyebrow">Keep the Day Free</p>
+      <p class="calendar__hint">Add the ceremony to your calendar so the date stays yours.</p>
+      <div class="calendar__actions" id="calendarActions"></div>
+    </section>
 
   </div>
 
-  <!-- ── 6. a note from the couple ─────────────────────── -->
+  <!-- ══════════════ 6. a note from the couple ══════════════ -->
   <section class="note reveal">
     <div class="note__frame">
       <p class="eyebrow">A Note From the Couple</p>
@@ -163,6 +228,7 @@
   </section>
 
   <footer class="footer">
+    <svg class="motif motif--rule"><use href="#m-jasmine" /></svg>
     <p>Please celebrate with us in spirit and presence</p>
     <p class="footer__regards">Best regards, Jyothi &amp; Sheryn</p>
   </footer>

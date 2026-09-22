@@ -36,14 +36,26 @@ reception-8b0696e3be/index.html   the reception
 robots.txt                        keeps search engines off the whole site
 assets/css/styles.css             both palettes; `data-theme` on <html> picks one
 assets/js/main.js                 gate, petals, countdown, calendar buttons
-assets/img/couple-*.svg           the couple, drawn as flat vector characters
+assets/img/couple-wedding.webp    the artwork on the wedding opening screen
+assets/img/couple-reception.svg  the drawn couple on the reception page
 assets/img/garland-*.svg          the hanging flowers across the top
 ```
 
-The illustrations are hand-written SVG, not exported artwork — open either file
-and the shapes are commented and editable. Colours come from the same palette
-as the page. `garland.js` in the scratchpad generated the two garlands; the
-committed SVGs are the output and are what the site serves.
+The wedding opening screen shows the supplied artwork full width. The picture
+is named on the element itself, in `wedding-*/index.html`:
+
+```html
+<div class="gate gate--photo" style="--photo: url('/assets/img/couple-wedding.webp')">
+```
+
+Change that filename and the picture changes. The path is root-absolute on
+purpose — a relative `url()` inside a custom property resolves against the
+stylesheet, not against the page, and silently doubles the folder.
+
+The motifs — the nilavilakku, the jasmine divider, the temple elephants — are
+SVG `<symbol>`s defined once at the top of the wedding page and reused with
+`<use>`. Every shape is `currentColor`, so each takes the colour of whatever it
+sits in. The garlands were generated once and committed as plain SVG.
 
 ## Changing the details
 
