@@ -6,9 +6,15 @@ and the root page reveals neither.
 
 | Page | URL | When |
 |---|---|---|
-| Wedding ceremony | `/wedding/` | Saturday 21 November 2026, 11.45 – 12.30 PM |
-| Reception | `/reception/` | Sunday 22 November 2026, 5 PM onwards |
+| Wedding ceremony | `/wedding-62df5d1ad5/` | Saturday 21 November 2026, 11.45 – 12.30 PM |
+| Reception | `/reception-8b0696e3be/` | Sunday 22 November 2026, 5 PM onwards |
 | Neutral front door | `/` | — |
+
+The random suffixes are deliberate. The site is public — free GitHub Pages
+requires it — so the folder names are what keeps the two functions apart. A
+guest who trims the address bar lands on the neutral page, and neither
+`/wedding/` nor `/reception/` exists to be guessed. Do not rename them to
+something memorable, and do not link one page from the other.
 
 ## What each invitation does
 
@@ -24,11 +30,12 @@ and the root page reveals neither.
 ## Layout
 
 ```
-index.html              neutral front door — links to neither function
-wedding/index.html      the wedding ceremony
-reception/index.html    the reception
-assets/css/styles.css   both palettes; `data-theme` on <html> picks one
-assets/js/main.js       gate, petals, countdown, calendar buttons
+index.html                        neutral front door — links to neither function
+wedding-62df5d1ad5/index.html     the wedding ceremony
+reception-8b0696e3be/index.html   the reception
+robots.txt                        keeps search engines off the whole site
+assets/css/styles.css             both palettes; `data-theme` on <html> picks one
+assets/js/main.js                 gate, petals, countdown, calendar buttons
 ```
 
 ## Changing the details
@@ -53,7 +60,7 @@ the printed time on the page, change them too.
 python -m http.server 8080
 ```
 
-Then open <http://localhost:8080/wedding/>.
+Then open <http://localhost:8080/wedding-62df5d1ad5/>.
 
 ## Publishing
 
@@ -62,7 +69,9 @@ No build step, no dependencies.
 
 ## A note on privacy
 
-GitHub Pages sites are public. Nothing links the two pages together and they
-ask search engines not to index them, but anyone who guesses the address can
-open either one. That is fine for an invitation; do not put anything on these
-pages you would mind a stranger reading.
+GitHub Pages sites are public, and the random folder names are the only thing
+keeping each invitation to its own guest list. They are unguessable, the pages
+ask search engines not to index them, and `robots.txt` repeats that for the
+whole site — but anyone holding a link can pass it on. Treat the links as
+semi-private, and do not put anything on these pages you would mind a stranger
+reading.
