@@ -292,7 +292,8 @@ body.is-locked { overflow: hidden; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5.5rem 1.25rem 6rem;
+  /* the top padding clears the hanging garland */
+  padding: clamp(7rem, 14vw, 10rem) 1.25rem 6rem;
   text-align: center;
 }
 
@@ -585,6 +586,46 @@ body.is-locked { overflow: hidden; }
   font-weight: 300;
   line-height: 1.8;
   color: var(--muted);
+}
+
+/* ── illustration and colour ───────────────────────────── */
+
+/* Hanging flowers across the very top, as on the printed card.
+   It stretches to any width and is purely decorative. */
+.garland {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(5rem, 11vw, 8.5rem);
+  object-fit: cover;
+  object-position: top center;
+  pointer-events: none;
+  z-index: 3;
+  opacity: .9;
+}
+
+.portrait {
+  padding: clamp(1rem, 3vw, 2rem) 1.25rem clamp(1.5rem, 4vw, 2.5rem);
+  text-align: center;
+}
+
+.portrait img {
+  display: block;
+  width: min(23rem, 74vw);
+  height: auto;
+  margin: 0 auto;
+}
+
+/* A soft wash of the page's own colour behind the countdown and
+   the calendar buttons, so the middle of the page is not all cream. */
+.band {
+  background:
+    linear-gradient(180deg,
+      transparent,
+      color-mix(in srgb, var(--crimson) 7%, transparent) 14%,
+      color-mix(in srgb, var(--crimson) 7%, transparent) 86%,
+      transparent);
 }
 
 /* ── petals ────────────────────────────────────────────── */

@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 530" role="img" aria-labelledby="t">
+<title id="t">Raghav and Krishnapriya in traditional Kerala wedding dress</title>
+
+<defs>
+  <linearGradient id="saree" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2a8f6b"/>
+    <stop offset="1" stop-color="#1c6b4f"/>
+  </linearGradient>
+  <linearGradient id="mundu" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fffefb"/>
+    <stop offset="1" stop-color="#f4eee1"/>
+  </linearGradient>
+</defs>
+
+<!-- ── floral arch ─────────────────────────────────────── -->
+<g fill="none" stroke="#e4c9a0" stroke-width="7" stroke-linecap="round">
+  <path d="M70 520 V226 a150 150 0 0 1 300 0 V520"/>
+</g>
+<g id="archblooms">
+  <g fill="#e8604f">
+    <circle cx="70" cy="300" r="9"/><circle cx="72" cy="250" r="7"/>
+    <circle cx="90" cy="180" r="9"/><circle cx="128" cy="126" r="7"/>
+    <circle cx="180" cy="90" r="9"/><circle cx="240" cy="86" r="7"/>
+    <circle cx="296" cy="110" r="9"/><circle cx="342" cy="162" r="7"/>
+    <circle cx="366" cy="232" r="9"/><circle cx="370" cy="296" r="7"/>
+  </g>
+  <g fill="#f3b3a6">
+    <circle cx="80" cy="212" r="6"/><circle cx="106" cy="150" r="5"/>
+    <circle cx="152" cy="104" r="6"/><circle cx="210" cy="84" r="5"/>
+    <circle cx="270" cy="94" r="6"/><circle cx="322" cy="134" r="5"/>
+    <circle cx="358" cy="194" r="6"/><circle cx="372" cy="262" r="5"/>
+  </g>
+  <g fill="#8fb98a">
+    <ellipse cx="88" cy="262" rx="4" ry="8" transform="rotate(20 88 262)"/>
+    <ellipse cx="116" cy="164" rx="4" ry="8" transform="rotate(45 116 164)"/>
+    <ellipse cx="196" cy="96" rx="8" ry="4"/>
+    <ellipse cx="310" cy="124" rx="4" ry="8" transform="rotate(-45 310 124)"/>
+    <ellipse cx="360" cy="268" rx="4" ry="8" transform="rotate(-20 360 268)"/>
+  </g>
+</g>
+
+<!-- ══════════════ GROOM ══════════════ -->
+<g id="groom">
+  <!-- mundu -->
+  <path d="M116 324 h100 l16 196 h-132 z" fill="url(#mundu)"/>
+  <path d="M116 324 h100 l2 22 h-104 z" fill="#efe7d6"/>
+  <!-- kasavu: gold along the hem and down the leading edge -->
+  <path d="M101 498 h130 l1 22 h-132 z" fill="#d8b271"/>
+  <path d="M212 324 h5 l9 174 h-6 z" fill="#d8b271" opacity=".75"/>
+  <path d="M160 350 l3 148" stroke="#e9e2d2" stroke-width="3" fill="none"/>
+
+  <!-- shirt -->
+  <path d="M166 202 c-26 3 -43 13 -48 28 l-10 100 h116 l-10 -100 c-5 -15 -22 -25 -48 -28 z" fill="#cdbb9c"/>
+  <!-- sleeves -->
+  <path d="M122 232 c-11 22 -14 54 -9 82 l22 4 c-5 -28 -3 -56 7 -74 z" fill="#c2af8e"/>
+  <path d="M210 232 c11 22 14 54 9 82 l-22 4 c5 -28 3 -56 -7 -74 z" fill="#c2af8e"/>
+  <!-- hands -->
+  <ellipse cx="128" cy="326" rx="12" ry="14" fill="#a9714a"/>
+  <ellipse cx="204" cy="326" rx="12" ry="14" fill="#a9714a"/>
+  <!-- placket + buttons -->
+  <path d="M162 214 h8 l2 116 h-12 z" fill="#c2af8e"/>
+  <g fill="#ab9878">
+    <circle cx="166" cy="246" r="2.6"/><circle cx="166" cy="274" r="2.6"/>
+    <circle cx="166" cy="302" r="2.6"/>
+  </g>
+  <!-- pocket -->
+  <path d="M186 240 h20 v18 h-20 z" fill="#c2af8e"/>
+
+  <!-- neck -->
+  <path d="M154 184 h24 v24 h-24 z" fill="#a9714a"/>
+  <!-- collar -->
+  <path d="M150 200 l16 20 l16 -20 l-9 -6 l-7 8 l-7 -8 z" fill="#d6c5a8"/>
+
+  <!-- head -->
+  <ellipse cx="166" cy="152" rx="33" ry="38" fill="#b5794f"/>
+  <!-- ears -->
+  <ellipse cx="133" cy="154" rx="6" ry="9" fill="#a9714a"/>
+  <ellipse cx="199" cy="154" rx="6" ry="9" fill="#a9714a"/>
+  <!-- beard -->
+  <path d="M134 150 c-1 33 14 54 32 54 s33 -21 32 -54 c-4 15 -10 24 -16 28 c-5 -11 -27 -11 -32 0 c-6 -4 -12 -13 -16 -28 z" fill="#201713"/>
+  <!-- hair -->
+  <path d="M133 150 c-4 -42 12 -62 33 -62 s37 20 33 62 c-3 -18 -7 -28 -14 -33 c-14 7 -36 8 -46 1 c-3 7 -5 18 -6 32 z" fill="#201713"/>
+  <g fill="#201713">
+    <circle cx="142" cy="108" r="10"/><circle cx="158" cy="96" r="11"/>
+    <circle cx="177" cy="96" r="11"/><circle cx="192" cy="110" r="10"/>
+  </g>
+  <!-- face -->
+  <g fill="#201713">
+    <ellipse cx="154" cy="150" rx="3.2" ry="3.6"/>
+    <ellipse cx="178" cy="150" rx="3.2" ry="3.6"/>
+  </g>
+  <g fill="none" stroke="#201713" stroke-width="2.6" stroke-linecap="round">
+    <path d="M148 140 q6 -5 12 -1"/>
+    <path d="M172 139 q6 -4 12 1"/>
+  </g>
+  <path d="M157 172 q9 8 18 0" fill="none" stroke="#7d3b2b" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- garland -->
+  <path d="M142 204 q24 62 48 0" fill="none" stroke="#fdfbf4" stroke-width="13" stroke-linecap="round"/>
+  <path d="M142 204 q24 62 48 0" fill="none" stroke="#e8604f" stroke-width="5" stroke-linecap="round" stroke-dasharray="1 15"/>
+</g>
+
+<!-- ══════════════ BRIDE ══════════════ -->
+<g id="bride">
+  <!-- hair behind -->
+  <path d="M252 168 c-16 44 -18 116 -8 178 c4 26 14 44 24 52 l66 0 c10 -10 18 -30 20 -56 c6 -62 2 -132 -14 -174 z" fill="#201713"/>
+
+  <!-- saree skirt -->
+  <path d="M258 320 h84 l24 200 h-132 z" fill="url(#saree)"/>
+  <path d="M234 520 h132 l-3 -22 h-126 z" fill="#4b2b26"/>
+  <g stroke="#d8b271" stroke-width="2" fill="none" opacity=".8">
+    <path d="M246 400 h108"/><path d="M242 440 h116"/><path d="M238 480 h124"/>
+  </g>
+  <g fill="#d8b271" opacity=".7">
+    <circle cx="272" cy="380" r="3"/><circle cx="300" cy="376" r="3"/><circle cx="328" cy="380" r="3"/>
+    <circle cx="262" cy="420" r="3"/><circle cx="300" cy="416" r="3"/><circle cx="338" cy="420" r="3"/>
+    <circle cx="256" cy="460" r="3"/><circle cx="300" cy="456" r="3"/><circle cx="344" cy="460" r="3"/>
+  </g>
+
+  <!-- blouse -->
+  <path d="M300 214 c-22 2 -36 11 -40 24 l-6 88 h92 l-6 -88 c-4 -13 -18 -22 -40 -24 z" fill="#4b2b26"/>
+  <!-- pallu over left shoulder -->
+  <path d="M316 212 c18 8 26 26 28 48 c3 34 2 74 -2 104 l-30 6 c6 -44 8 -92 2 -122 c-2 -12 -6 -22 -12 -28 z" fill="url(#saree)"/>
+  <path d="M338 262 c4 32 3 72 -1 102 l-12 3 c5 -32 6 -74 2 -104 z" fill="#4b2b26"/>
+  <!-- long hair falling in front of both shoulders -->
+  <path d="M268 160 C252 200 248 270 252 320 C254 344 258 358 262 366 L279 360 C275 346 273 320 273 288 C273 240 275 195 279 168 Z" fill="#241a16"/>
+  <path d="M332 160 C348 200 352 270 348 320 C346 344 342 358 338 366 L321 360 C325 346 327 320 327 288 C327 240 325 195 321 168 Z" fill="#241a16"/>
+  <!-- a few waves, so the length reads as curls not curtains -->
+  <g fill="none" stroke="#3d2c25" stroke-width="2.2" stroke-linecap="round" opacity=".85">
+    <path d="M262 214 q7 22 1 44 q-5 22 2 42"/>
+    <path d="M338 214 q-7 22 -1 44 q5 22 -2 42"/>
+  </g>
+
+  <!-- arms -->
+  <path d="M262 236 c-9 20 -11 50 -7 76 l20 4 c-4 -26 -2 -54 6 -70 z" fill="#4b2b26"/>
+  <ellipse cx="268" cy="322" rx="11" ry="13" fill="#bc835a"/>
+  <path d="M344 240 c7 22 8 52 4 74 l-18 4 c3 -26 2 -52 -4 -66 z" fill="#4b2b26"/>
+  <ellipse cx="338" cy="322" rx="11" ry="13" fill="#bc835a"/>
+  <!-- bangles -->
+  <g fill="none" stroke="#d8b271" stroke-width="3">
+    <path d="M258 310 h20"/><path d="M258 316 h20"/>
+    <path d="M328 310 h20"/><path d="M328 316 h20"/>
+  </g>
+
+  <!-- neck + necklace -->
+  <path d="M290 190 h20 v26 h-20 z" fill="#ad7449"/>
+  <path d="M284 214 q16 18 32 0" fill="none" stroke="#d8b271" stroke-width="3.5"/>
+  <path d="M288 222 q12 14 24 0" fill="none" stroke="#d8b271" stroke-width="2.5"/>
+
+  <!-- head -->
+  <ellipse cx="300" cy="160" rx="31" ry="36" fill="#bc835a"/>
+  <ellipse cx="269" cy="162" rx="5" ry="8" fill="#ad7449"/>
+  <ellipse cx="331" cy="162" rx="5" ry="8" fill="#ad7449"/>
+  <!-- earrings -->
+  <circle cx="269" cy="172" r="4" fill="#d8b271"/>
+  <circle cx="331" cy="172" r="4" fill="#d8b271"/>
+
+  <!-- hair front + parting -->
+  <path d="M269 158 c-3 -40 11 -58 31 -58 s34 18 31 58 c-4 -20 -8 -30 -14 -34 c-16 10 -34 10 -48 0 c-1 8 0 20 0 34 z" fill="#201713"/>
+  <!-- bindi -->
+  <circle cx="300" cy="134" r="3.2" fill="#b8304c"/>
+  <!-- face -->
+  <g fill="#201713">
+    <ellipse cx="289" cy="158" rx="3" ry="3.4"/>
+    <ellipse cx="311" cy="158" rx="3" ry="3.4"/>
+  </g>
+  <g fill="none" stroke="#201713" stroke-width="2.4" stroke-linecap="round">
+    <path d="M283 148 q6 -5 12 -1"/>
+    <path d="M305 147 q6 -4 12 1"/>
+  </g>
+  <path d="M292 178 q8 8 16 0" fill="none" stroke="#a83f4a" stroke-width="2.8" stroke-linecap="round"/>
+
+
+  <!-- garland -->
+  <path d="M278 212 q22 58 44 0" fill="none" stroke="#fdfbf4" stroke-width="12" stroke-linecap="round"/>
+  <path d="M278 212 q22 58 44 0" fill="none" stroke="#e8604f" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="1 14"/>
+</g>
+
+<!-- ── ground petals ───────────────────────────────────── -->
+<g opacity=".85">
+  <ellipse cx="86" cy="512" rx="9" ry="5" fill="#f3b3a6"/>
+  <ellipse cx="116" cy="520" rx="7" ry="4" fill="#e8604f"/>
+  <ellipse cx="390" cy="514" rx="9" ry="5" fill="#f3b3a6"/>
+  <ellipse cx="362" cy="522" rx="7" ry="4" fill="#e8604f"/>
+</g>
+</svg>

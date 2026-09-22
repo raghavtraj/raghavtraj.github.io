@@ -36,7 +36,14 @@ reception-8b0696e3be/index.html   the reception
 robots.txt                        keeps search engines off the whole site
 assets/css/styles.css             both palettes; `data-theme` on <html> picks one
 assets/js/main.js                 gate, petals, countdown, calendar buttons
+assets/img/couple-*.svg           the couple, drawn as flat vector characters
+assets/img/garland-*.svg          the hanging flowers across the top
 ```
+
+The illustrations are hand-written SVG, not exported artwork — open either file
+and the shapes are commented and editable. Colours come from the same palette
+as the page. `garland.js` in the scratchpad generated the two garlands; the
+committed SVGs are the output and are what the site serves.
 
 ## Changing the details
 
