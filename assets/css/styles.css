@@ -318,9 +318,26 @@ body.is-locked { overflow: hidden; }
   inset: 0;
   background-image: var(--photo);
   background-size: cover;
-  /* high enough that both their faces clear the veil */
-  background-position: center 8%;
+  /* Both pictures put the couple in their upper third. On a wide screen
+     a tall portrait has to scale up a long way to cover, which drops their
+     faces towards the veil — holding the frame at 20% keeps them above it. */
+  background-position: center 20%;
   background-repeat: no-repeat;
+}
+
+/* On a screen wider than it is tall, covering with a tall portrait means
+   scaling it so far that the couple fills the frame and the veil ends up
+   across their faces. Fit it by height instead and let the page's own
+   colour hold the sides — the picture stays whole, and they stay clear.
+   A near-square picture still crops well and keeps cover, so only a tall
+   one opts in, with .gate--tall. */
+@media (min-aspect-ratio: 1/1) {
+  .gate--tall::before {
+    background-size: auto 116%;
+    background-position: center top;
+  }
+
+  .gate__veil { padding-top: clamp(2.5rem, 7vh, 4.5rem); }
 }
 
 /* The veil sits under them, never across them. It is mixed from the
