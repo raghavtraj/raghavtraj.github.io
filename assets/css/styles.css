@@ -26,10 +26,9 @@
   --gold-lamp: #c08a2e;
   --line:      rgba(184, 48, 76, .28);
 
-  --display:   "Marcellus", "Cormorant Garamond", Georgia, serif;
-  --serif:     "Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --sans:      "Jost", "Helvetica Neue", Arial, sans-serif;
-  --malayalam: "Noto Serif Malayalam", "Cormorant Garamond", serif;
+  --display: "Marcellus", "Cormorant Garamond", Georgia, serif;
+  --serif:   "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:    "Jost", "Helvetica Neue", Arial, sans-serif;
 
   --measure: 62rem;
   --ease: cubic-bezier(.22, .61, .36, 1);
@@ -290,8 +289,13 @@ body.is-locked { overflow: hidden; }
   animation: rise 1.1s var(--ease) both;
 }
 
+/* The two names stack, with whatever joins them centred on its own
+   line — never tucked against the second name. */
 .gate__names {
   margin: .4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;
@@ -299,6 +303,13 @@ body.is-locked { overflow: hidden; }
   line-height: 1.25;
   color: var(--crimson);
 }
+
+.gate__amp {
+  font-size: .62em;
+  line-height: 1.6;
+  opacity: .85;
+}
+
 
 /* The opening card carrying the artwork full screen.
    The picture is named on the element itself, as --photo, so
@@ -430,16 +441,6 @@ body.is-locked { overflow: hidden; }
 
 .tuskers .eyebrow { margin: 0; }
 
-/* ── Malayalam ─────────────────────────────────────────── */
-
-.malayalam {
-  margin: .1rem 0 .3rem;
-  font-family: var(--malayalam);
-  font-weight: 400;
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  line-height: 1.7;
-  color: var(--green);
-}
 
 /* ── 2. hero ───────────────────────────────────────────── */
 
@@ -731,6 +732,9 @@ body.is-locked { overflow: hidden; }
 
 .holding__names {
   margin: .4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: var(--serif);
   font-style: italic;
   font-weight: 400;

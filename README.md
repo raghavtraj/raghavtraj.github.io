@@ -6,9 +6,17 @@ and the root page reveals neither.
 
 | Page | URL | When |
 |---|---|---|
-| Wedding ceremony | `/wedding-62df5d1ad5/` | Saturday 21 November 2026, 11.45 – 12.30 PM |
+| Wedding — groom's side | `/wedding-62df5d1ad5/` | Saturday 21 November 2026, 11.45 – 12.30 PM |
+| Wedding — bride's side | `/wedding-bride-fdf694a962/` | the same ceremony |
 | Reception | `/reception-8b0696e3be/` | Sunday 22 November 2026, 5 PM onwards |
 | Neutral front door | `/` | — |
+
+The two wedding pages are the same ceremony invited from different sides.
+Whoever is inviting comes first: on the groom's card his parents open and the
+bride is introduced below the names as `D/O`; on the bride's card hers open,
+the wording reads *our daughter's*, the groom is `S/O`, and the regards are
+her side's. Everything else — date, venue, artwork, countdown, calendar — is
+identical, so a change to the ceremony has to be made in both.
 
 The random suffixes are deliberate. The site is public — free GitHub Pages
 requires it — so the folder names are what keeps the two functions apart. A
@@ -30,9 +38,10 @@ something memorable, and do not link one page from the other.
 ## Layout
 
 ```
-index.html                        neutral front door — links to neither function
-wedding-62df5d1ad5/index.html     the wedding ceremony
-reception-8b0696e3be/index.html   the reception
+index.html                          neutral front door — links to no function
+wedding-62df5d1ad5/index.html       the wedding, from the groom's side
+wedding-bride-fdf694a962/index.html the wedding, from the bride's side
+reception-8b0696e3be/index.html     the reception
 robots.txt                        keeps search engines off the whole site
 assets/css/styles.css             both palettes; `data-theme` on <html> picks one
 assets/js/main.js                 gate, petals, countdown, calendar buttons
